@@ -44,24 +44,26 @@ export default function App() {
 
   return (
     <main className="main-container">
-      <section className="container-01">
+      <header className="header">
         <div className="area-main-title areas">
           <TitleSection title="Productivity Hub" />
         </div>
         <div className="area-profile-infos areas">
-          <p className="text-hello">Olá, </p>
-          <Name name="Adonislan Alves da Silva" />
-          <p className="second-text">Estamos prontos para você.</p>
+          <p className="text-hello">
+            Olá, <Name name="Adonislan Alves da Silva" />
+          </p>
         </div>
+      </header>
+
+      <section className="container-01">
         <article className="area-fast-notes">
-          <h4 className="title-fast-notes">Notas Curtas:</h4>
+          <h4 className="title-fast-notes">Bloco de Notas Curtas:</h4>
           <div className="area-fast-note">
             <textarea
               name="text"
               id="text-fast-note"
               placeholder="Escreva uma nota rápida"
               maxLength={200}
-              cols={37}
               rows={5}
               value={note}
               onChange={(e) => setNote(e.target.value)}
