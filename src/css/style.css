@@ -12,7 +12,8 @@
   min-height: 100vh;
 }
 
-.container-01 {
+.container-01,
+.container-03 {
   background-color: #99bda9;
   color: #414142;
   max-width: 25rem;
