@@ -105,6 +105,11 @@ export default function App() {
         <div className="area-main-title">
           <TitleSection title="Utilitários" />
         </div>
+        <h1>Dia da Semana</h1>
+        <h1>Hora</h1>
+        <h1>Calendário</h1>
+        <h1>Calculadora</h1>
+        <h1>Previsão do Tempo</h1>
       </section>
 
       <WindowNote isOpen={isModalOpen} onClose={closeModal} />
