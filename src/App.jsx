@@ -6,6 +6,7 @@ import TitleSection from "./components/TitleSection";
 import WindowNote from "./components/WindowNote";
 import Time from "./components/Time";
 import Calender from "./components/Calender";
+import Calculator from "./components/Calculator";
 import Layout01 from "./images/layout-01.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -99,9 +100,7 @@ export default function App() {
         <div className="area-main-title">
           <TitleSection title="Tarefas Importantes" />
         </div>
-        <figure className="figure-deco">
-          <img src={Layout01} alt="Foto-Estilização" className="img-plant" />
-        </figure>
+
         <div className="area-cards-activity">
           {/* Renderize o conteúdo de tarefas importantes aqui */}
         </div>
@@ -120,21 +119,20 @@ export default function App() {
       </section>
 
       <section className="container-04">
-        <div>
-          Pegue um café e relaxe, logo mais teremos novidades nesse espaço!
-        </div>
+        <Calculator />
       </section>
 
       <section className="container-05">
         <div>
-          Pegue um café e relaxe, logo mais teremos novidades nesse espaço!
+          <p>
+            Pegue um café e aproveite! Nossa comunidade está sempre pensando em
+            melhorias para você!
+          </p>
         </div>
       </section>
 
       <section className="container-06">
-        <div>
-          Pegue um café e relaxe, logo mais teremos novidades nesse espaço!
-        </div>
+        <div></div>
       </section>
 
       <WindowNote isOpen={isModalOpen} onClose={closeModal} />

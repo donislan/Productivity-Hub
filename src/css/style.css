@@ -8,7 +8,7 @@
   background-color: #dbccb5;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   min-height: 100vh;
 }
 
@@ -30,6 +30,7 @@
   margin: 1rem;
   box-shadow: 10px 5px 15px 0px rgba(0, 0, 0, 0.3);
   transition: transform 0.1s ease-out;
+  gap: 5rem;
 }
 
 .header:hover {
@@ -152,7 +153,8 @@
   grid-column: 2 / span 2;
   grid-row: 1 / span 3;
   background-color: #e7decf;
-  height: 95vh;
+  min-height: 20rem;
+  max-height: 120vh;
   position: relative;
   border: 2px dashed #ffffff;
   margin-top: 1rem;
@@ -164,10 +166,12 @@
 
 .container-03 {
   grid-column: 4;
-  grid-row: 1 / span 2;
+  grid-row: 1;
   color: #fdfdfd;
   display: flex;
-  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
   transition: transform 0.1s ease-out;
 }
 
@@ -177,25 +181,31 @@
 
 .container-04 {
   grid-column: 4;
-  grid-row: 3;
-  background-color: #91ba90;
+  grid-row: 2;
+  max-height: 13.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 4rem;
 }
 
 .container-05 {
   grid-column: 2 / span 2;
-  grid-row: 4;
+  grid-row: 3;
   background-color: #91ba90;
+  height: 100%;
 }
 
 .container-06 {
   grid-column: 4;
-  grid-row: 4;
+  grid-row: 3;
   background-color: #91ba90;
 }
 
 .btn-activity {
   position: absolute;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   width: 50px;
   height: 50px;
@@ -230,19 +240,6 @@
   }
 }
 
-.img-plant {
-  width: 60%;
-  position: absolute;
-  bottom: 240px;
-  left: 430px;
-  transition: transform 0.3s ease; /* Para outros efeitos de transição, se necessário */
-}
-
-.img-plant:hover {
-  animation: shake 0.5s ease; /* Aplica a animação de chacoalhar */
-}
-
-.container-04,
 .container-05,
 .container-06,
 .container-07 {
