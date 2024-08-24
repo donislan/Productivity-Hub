@@ -60,8 +60,10 @@ export default function App() {
       </header>
 
       <section className="container-01">
-        <article className="area-fast-notes">
+        <header className="header-title-fast-notes">
           <h4 className="title-fast-notes">Bloco de Notas Curtas:</h4>
+        </header>
+        <article className="area-fast-notes">
           <div className="area-fast-note">
             <textarea
               name="text"
@@ -118,19 +120,21 @@ export default function App() {
       </section>
 
       <section className="container-04">
-        <div>O4</div>
+        <div>
+          Pegue um café e relaxe, logo mais teremos novidades nesse espaço!
+        </div>
       </section>
 
       <section className="container-05">
-        <div>05</div>
+        <div>
+          Pegue um café e relaxe, logo mais teremos novidades nesse espaço!
+        </div>
       </section>
 
       <section className="container-06">
-        <div>06</div>
-      </section>
-
-      <section className="container-07">
-        <div>07</div>
+        <div>
+          Pegue um café e relaxe, logo mais teremos novidades nesse espaço!
+        </div>
       </section>
 
       <WindowNote isOpen={isModalOpen} onClose={closeModal} />
