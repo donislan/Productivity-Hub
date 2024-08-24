@@ -22,6 +22,26 @@
   color: #333;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+.area-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#title,
+#reminder-text {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.area-radios {
+  display: flex;
+  justify-content: space-around;
 }
 
 .close {
