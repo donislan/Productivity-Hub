@@ -1,13 +1,13 @@
-// src/App.jsx
 import React, { useState } from "react";
 import Btn from "./components/Btn";
 import Name from "./components/Name";
 import TitleSection from "./components/TitleSection";
 import WindowNote from "./components/WindowNote";
 import Time from "./components/Time";
+import Design01 from "../src/images/design-01.png";
 import Calender from "./components/Calender";
 import Calculator from "./components/Calculator";
-import Layout01 from "./images/layout-01.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./css/style.css";
@@ -43,8 +43,31 @@ export default function App() {
     localStorage.setItem("notes", JSON.stringify(upDatedNotes));
   };
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const [reminders, setReminders] = useState(() => {
+    const storedReminders = localStorage.getItem("reminders");
+    return storedReminders ? JSON.parse(storedReminders) : [];
+  });
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const addReminder = (newReminder) => {
+    const id = Math.floor(Math.random() * 1000000);
+    const updatedReminders = [...reminders, { id, ...newReminder }];
+    setReminders(updatedReminders);
+    localStorage.setItem("reminders", JSON.stringify(updatedReminders));
+  };
+
+  const removeReminder = (id) => {
+    const updatedReminders = reminders.filter((r) => r.id !== id);
+    setReminders(updatedReminders);
+    localStorage.setItem("reminders", JSON.stringify(updatedReminders));
+  };
 
   return (
     <main className="main-container">
@@ -102,14 +125,36 @@ export default function App() {
         </div>
 
         <div className="area-cards-activity">
-          {/* Renderize o conteúdo de tarefas importantes aqui */}
+          {reminders.map((reminder) => (
+            <div key={reminder.id} className="card-activity">
+              <h3 className="title-reminder">{reminder.title}</h3>
+              <p className="text-reminder">{reminder.reminderText}</p>
+              <span className="radio-mark">
+                Prioridade: {reminder.priority}
+              </span>
+              <button
+                className="btn-remove"
+                onClick={() => removeReminder(reminder.id)}
+                aria-label="Remover Lembrete"
+              >
+                <FontAwesomeIcon icon={faTrash} />
+              </button>
+            </div>
+          ))}
         </div>
+
         <div className="area-btn-add-activity">
           <button className="btn-activity" onClick={openModal}>
             +
           </button>
         </div>
       </section>
+
+      <WindowNote
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        addReminder={addReminder}
+      />
 
       <section className="container-03">
         <div>
@@ -123,7 +168,10 @@ export default function App() {
       </section>
 
       <section className="container-05">
-        <div>
+        <div className="img-container-05">
+          <img src={Design01} alt="" id="design-01" />
+        </div>
+        <div className="text-cotainer-05">
           <p>
             Pegue um café e aproveite! Nossa comunidade está sempre pensando em
             melhorias para você!
@@ -134,8 +182,6 @@ export default function App() {
       <section className="container-06">
         <div></div>
       </section>
-
-      <WindowNote isOpen={isModalOpen} onClose={closeModal} />
     </main>
   );
 }
