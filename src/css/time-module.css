@@ -1,0 +1,27 @@
+.container-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7decf;
+  color: #2e2e52;
+  padding: 10px;
+  border: 5px solid #91ba90;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 0.5rem 0;
+  transition: transform 0.1s ease-out;
+}
+
+.container-time:hover {
+  transform: scale(1.01);
+}
+
+.day {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.hour {
+  font-size: 30px;
+  font-weight: bold;
+}

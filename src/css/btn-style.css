@@ -5,7 +5,7 @@
 }
 
 .btn {
-  background-color: #828987;
+  background-color: #91ba90;
   padding: 0.5rem;
   border: none;
   border-radius: 0.5rem;
@@ -15,5 +15,5 @@
 }
 
 .btn:hover {
-  background-color: #547d6f;
+  background-color: #2e5548;
 }

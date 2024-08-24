@@ -11,12 +11,11 @@
   z-index: 1000;
 }
 
-/* Container do modal */
 .modal-container {
-  background-color: #547d6f;
+  background-color: #91ba90;
   padding: 2rem;
   border-radius: 0.5rem;
-  max-width: 600px; /* Ajuste conforme necessário */
+  max-width: 600px;
   width: 100%;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -25,7 +24,6 @@
   flex-direction: column;
 }
 
-/* Fechar o modal */
 .close {
   position: absolute;
   top: 10px;

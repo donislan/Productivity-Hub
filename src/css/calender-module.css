@@ -1,0 +1,27 @@
+.calender {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7decf;
+  color: #2e2e52;
+  padding: 10px;
+  border: 5px solid #91ba90;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 0.5rem 0;
+  transition: transform 0.1s ease-out;
+}
+
+.calender:hover {
+  transform: scale(1.01);
+}
+
+.react-calendar {
+  width: 280px;
+  max-width: 100%;
+}
+
+.highlight {
+  background-color: #ffd700;
+  color: #000000;
+}

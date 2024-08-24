@@ -4,6 +4,9 @@ import Btn from "./components/Btn";
 import Name from "./components/Name";
 import TitleSection from "./components/TitleSection";
 import WindowNote from "./components/WindowNote";
+import Time from "./components/Time";
+import Calender from "./components/Calender";
+import Layout01 from "./images/layout-01.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./css/style.css";
@@ -50,7 +53,8 @@ export default function App() {
         </div>
         <div className="area-profile-infos areas">
           <p className="text-hello">
-            Olá, <Name name="Adonislan Alves da Silva" />
+            Olá, <Name name="Adonislan Alves da Silva" /> Estamos prontos para
+            trabalhar!
           </p>
         </div>
       </header>
@@ -93,6 +97,9 @@ export default function App() {
         <div className="area-main-title">
           <TitleSection title="Tarefas Importantes" />
         </div>
+        <figure className="figure-deco">
+          <img src={Layout01} alt="Foto-Estilização" className="img-plant" />
+        </figure>
         <div className="area-cards-activity">
           {/* Renderize o conteúdo de tarefas importantes aqui */}
         </div>
@@ -104,14 +111,26 @@ export default function App() {
       </section>
 
       <section className="container-03">
-        <div className="area-main-title">
-          <TitleSection title="Utilitários" />
+        <div>
+          <Time />
+          <Calender />
         </div>
-        <h1>Dia da Semana</h1>
-        <h1>Hora</h1>
-        <h1>Calendário</h1>
-        <h1>Calculadora</h1>
-        <h1>Previsão do Tempo</h1>
+      </section>
+
+      <section className="container-04">
+        <div>O4</div>
+      </section>
+
+      <section className="container-05">
+        <div>05</div>
+      </section>
+
+      <section className="container-06">
+        <div>06</div>
+      </section>
+
+      <section className="container-07">
+        <div>07</div>
       </section>
 
       <WindowNote isOpen={isModalOpen} onClose={closeModal} />
